@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MaximusFitCenter</title>
 
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
@@ -13,67 +13,127 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="MaximusFitCenter Logo">
+  <img src="logo.png" alt="MaximusFitCenter">
   <nav>
     <a href="#home">Home</a>
     <a href="#planos">Planos</a>
+    <a href="#modalidades">Modalidades</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section class="banner" id="home">
-  <img src="banner.jpg" alt="Banner MaximusFitCenter">
+  <div class="banner-text">
+    <h1>Nível <span>MAXIMUS</span> de Treinamento</h1>
+    <p>Força, disciplina e resultado real.</p>
+  </div>
 </section>
 
+<!-- PLANOS -->
 <section class="container" id="planos">
-  <h2 class="section-title">Escolha seu plano hoje!</h2>
+  <h2 class="section-title">Planos Especiais</h2>
 
   <div class="planos">
 
-    <!-- PLANO ANUAL -->
     <div class="plano">
-      <h3>Plano Anual</h3>
-      <p class="preco">R$147,00/mês (R$1.764,00 em até 12x)</p>
-      <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
-      <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> EU QUERO
-      </a>
-      <div class="detalhes">
-        <ul>
-          <li>✅ 2x Avaliações físicas</li>
-          <li>🎯 Matrícula isenta</li>
-          <li>🎁 Sem fidelidade</li>
-          <li>💸 28% de desconto</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- PLANO RECORRENTE -->
-    <div class="plano">
-      <h3>Plano Recorrente</h3>
-      <p class="preco">R$177,00/mês</p>
-      <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
-      <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> EU QUERO
-      </a>
-      <div class="detalhes">
-        <ul>
-          <li>✅ Não compromete limite do cartão</li>
-          <li>🎯 Matrícula isenta</li>
-          <li>🎁 Sem fidelidade</li>
-          <li>🔁 Recorrência mensal</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- PLANO FAMÍLIA -->
-    <div class="plano">
+      <i class="fas fa-users"></i>
       <h3>Plano Família</h3>
       <p class="preco">R$ 99,90 / pessoa</p>
-      <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
-      <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> EU QUERO
-      </a>
+      <button onclick="toggleDetalhes(this)">Ver Detalhes</button>
+
+      <div class="detalhes">
+        <ul>
+          <li>👨‍👩‍👧‍👦 3 ou mais pessoas</li>
+          <li>📄 Documento familiar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plano">
+      <i class="fas fa-heart"></i>
+      <h3>Plano Casal</h3>
+      <p class="preco">R$ 99,90 / pessoa</p>
+      <button onclick="toggleDetalhes(this)">Ver Detalhes</button>
+
+      <div class="detalhes">
+        <ul>
+          <li>💍 Casamento ou união estável</li>
+          <li>📄 Documento comprobatório</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plano">
+      <i class="fas fa-building"></i>
+      <h3>Plano Empresarial</h3>
+      <p class="preco">R$ 99,90 / colaborador</p>
+      <button onclick="toggleDetalhes(this)">Ver Detalhes</button>
+
+      <div class="detalhes">
+        <ul>
+          <li>🏢 A partir de 10 pessoas</li>
+          <li>💪 Musculação liberada</li>
+          <li>👨‍🏫 Professores inclusos</li>
+          <li>🚫 Sem taxas extras</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODALIDADES -->
+<section class="container dark" id="modalidades">
+  <h2 class="section-title">Modalidades & Horários</h2>
+
+  <table>
+    <tr>
+      <th>Modalidade</th>
+      <th>Turmas</th>
+      <th>Dias</th>
+      <th>Horários</th>
+    </tr>
+
+    <tr>
+      <td>🥊 Muay Thai</td>
+      <td>Infantil / Juvenil / Adulto</td>
+      <td>Ter • Qua • Qui</td>
+      <td>17h • 20h • 21h</td>
+    </tr>
+
+    <tr>
+      <td>🥋 Jiu-Jitsu</td>
+      <td>Iniciantes / Avançados</td>
+      <td>Seg • Sex</td>
+      <td>20h às 21h</td>
+    </tr>
+
+    <tr>
+      <td>🥋 Karatê</td>
+      <td>Infantil / Juvenil / Adulto</td>
+      <td>Seg • Qua</td>
+      <td>16h às 17h</td>
+    </tr>
+
+    <tr>
+      <td>💃 FitDance</td>
+      <td>Todos</td>
+      <td>Ter • Qui</td>
+      <td>20h</td>
+    </tr>
+  </table>
+
+  <p class="instrutor">Instrutora FitDance: <strong>Gaby Gomes</strong></p>
+</section>
+
+<footer id="contato">
+  <p>📍 SEG A SEX: 05:30 às 22:00 | SÁB: 08:00 às 16:00 | DOM: 09:00 às 12:00</p>
+  <p>© 2025 MaximusFitCenter</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>      </a>
       <div class="detalhes">
         <ul>
           <li>👨‍👩‍👧‍👦 Grupos de 3 ou mais pessoas</li>
