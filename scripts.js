@@ -1,5 +1,6 @@
 function toggleDetalhes(button) {
-  const detalhes = button.nextElementSibling.nextElementSibling;
+  const plano = button.closest(".plano");
+  const detalhes = plano.querySelector(".detalhes");
 
   if (detalhes.style.display === "block") {
     detalhes.style.display = "none";
