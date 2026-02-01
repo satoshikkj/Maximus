@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaximusFitCenter</title>
+
+  <!-- Ícone (troque depois se quiser) -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="MaximusFitCenter Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="banner" id="home">
+    <img src="banner.jpg" alt="Banner MaximusFitCenter">
+  </section>
+
+  <section class="container" id="planos">
+    <h2 class="section-title">Escolha seu plano hoje!</h2>
+
+    <div class="planos">
+
+      <div class="plano">
+        <h3>Plano Anual</h3>
+        <p class="preco">R$147,00/mês (R$1.764,00 em até 12x)</p>
+        <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+        <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> EU QUERO
+        </a>
+
+        <div class="detalhes">
+          <ul>
+            <li>✅ 2x Avaliações físicas</li>
+            <li>🎯 Matrícula isenta</li>
+            <li>🎁 Sem fidelidade</li>
+            <li>💸 28% de desconto</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plano">
+        <h3>Plano Recorrente</h3>
+        <p class="preco">R$177,00/mês</p>
+        <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+        <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> EU QUERO
+        </a>
+
+        <div class="detalhes">
+          <ul>
+            <li>✅ Não compromete limite do cartão</li>
+            <li>🎯 Matrícula isenta</li>
+            <li>🎁 Sem fidelidade</li>
+            <li>🔁 Recorrência mensal</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contato">
+    <p>&copy; 2025 MaximusFitCenter. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
