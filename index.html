@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TITLE -->
   <title>Maximus Fit Center</title>
 
-  <!-- Fonte -->
+  <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -13,7 +16,7 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container">
     <h1 class="logo">Maximus<span>Fit</span>Center</h1>
@@ -22,12 +25,13 @@
       <a href="#home">Home</a>
       <a href="#modalidades">Modalidades</a>
       <a href="#planos">Planos</a>
+      <a href="#horarios">Horários</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO / HOME -->
+<!-- ================= HERO ================= -->
 <section id="home" class="hero">
   <div class="container">
     <h2>Maximus Fit Center</h2>
@@ -35,7 +39,7 @@
   </div>
 </section>
 
-<!-- MODALIDADES -->
+<!-- ================= MODALIDADES ================= -->
 <section id="modalidades" class="section">
   <div class="container">
     <h2 class="section-title">Modalidades</h2>
@@ -50,7 +54,7 @@
   </div>
 </section>
 
-<!-- PLANOS -->
+<!-- ================= PLANOS ================= -->
 <section id="planos" class="section dark">
   <div class="container">
     <h2 class="section-title">Planos</h2>
@@ -62,13 +66,13 @@
         <h3>Plano Família</h3>
         <p class="preco">R$ 99,90 <span>/ pessoa</span></p>
 
-        <button class="btn-info" data-target="familia">
+        <button class="btn-info" onclick="toggleInfo(this)">
           Informações
         </button>
 
-        <div class="info" id="familia">
+        <div class="info">
           <p>
-            Grupo de <strong>3 ou mais pessoas</strong> pagam apenas  
+            Grupo de <strong>3 ou mais pessoas</strong> pagam apenas
             <strong>R$ 99,90 por pessoa</strong>.
           </p>
         </div>
@@ -79,11 +83,11 @@
         <h3>Plano Casal</h3>
         <p class="preco">R$ 99,90 <span>/ pessoa</span></p>
 
-        <button class="btn-info" data-target="casal">
+        <button class="btn-info" onclick="toggleInfo(this)">
           Informações
         </button>
 
-        <div class="info" id="casal">
+        <div class="info">
           <p>
             Válido mediante comprovação de casamento ou união estável.
           </p>
@@ -95,11 +99,11 @@
         <h3>Plano Empresarial</h3>
         <p class="preco">R$ 99,90 <span>/ colaborador</span></p>
 
-        <button class="btn-info" data-target="empresa">
+        <button class="btn-info" onclick="toggleInfo(this)">
           Informações
         </button>
 
-        <div class="info" id="empresa">
+        <div class="info">
           <ul>
             <li>Grupos a partir de 10 pessoas</li>
             <li>Musculação liberada</li>
@@ -114,7 +118,7 @@
   </div>
 </section>
 
-<!-- HORÁRIOS -->
+<!-- ================= HORÁRIOS ================= -->
 <section id="horarios" class="section">
   <div class="container">
     <h2 class="section-title">Horários</h2>
@@ -127,15 +131,13 @@
   </div>
 </section>
 
-<!-- CONTATO -->
+<!-- ================= CONTATO ================= -->
 <section id="contato" class="section dark">
   <div class="container">
     <h2 class="section-title">Contato</h2>
 
     <div class="contato">
-
       <a href="https://wa.me/559186182429" target="_blank" class="btn">
-        <!-- WhatsApp SVG -->
         <svg viewBox="0 0 24 24">
           <path d="M20.52 3.48A11.91 11.91 0 0012.01 0C5.38 0 .01 5.37.01 12a11.9 11.9 0 001.67 6.07L0 24l6.13-1.61A11.94 11.94 0 0012.01 24C18.63 24 24 18.63 24 12a11.91 11.91 0 00-3.48-8.52z"/>
         </svg>
@@ -143,7 +145,6 @@
       </a>
 
       <a href="https://instagram.com/MaximusFitCenter" target="_blank" class="btn outline">
-        <!-- Instagram SVG -->
         <svg viewBox="0 0 24 24">
           <rect x="2" y="2" width="20" height="20" rx="5"/>
           <circle cx="12" cy="12" r="4"/>
@@ -151,17 +152,16 @@
         </svg>
         Instagram
       </a>
-
     </div>
   </div>
 </section>
 
-<!-- BOTÃO WHATSAPP FIXO -->
+<!-- ================= WHATSAPP FIXO ================= -->
 <a href="https://wa.me/559186182429" target="_blank" class="whatsapp-float">
   WhatsApp
 </a>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <p>© 2026 Maximus Fit Center</p>
 </footer>
