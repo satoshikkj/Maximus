@@ -1,161 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maximus Fit Center</title>
 
+  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
-  <h1>Maximus Fit Center</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#modalidades">Modalidades</a>
-    <a href="#planos">Planos</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<header class="header">
+  <div class="container">
+    <h1 class="logo">Maximus<span>Fit</span>Center</h1>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Maximus Fit Center</h1>
-  <p>Força, disciplina e qualidade de vida</p>
-  <a href="#planos">Ver planos</a>
-</section>
-
-<!-- HOME -->
-<section id="home" class="home">
-  <h2>Maximus Fit Center</h2>
-  <p>Força, disciplina e resultado.</p>
+<!-- HERO / HOME -->
+<section id="home" class="hero">
+  <div class="container">
+    <h2>Maximus Fit Center</h2>
+    <p>Força, disciplina e qualidade de vida.</p>
+  </div>
 </section>
 
 <!-- MODALIDADES -->
-<section id="modalidades">
-  <h2>Modalidades</h2>
-  <div class="grid">
-    <div class="card">Muay Thai</div>
-    <div class="card">Jiu-Jitsu</div>
-    <div class="card">Karatê</div>
-    <div class="card">FitDance</div>
-  </div>
-</section>
+<section id="modalidades" class="section">
+  <div class="container">
+    <h2 class="section-title">Modalidades</h2>
 
-<!-- PLANOS (CARDS COM TOGGLE) -->
-<section id="planos">
-  <h2>Planos</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Plano Família</h3>
-      <div class="preco">R$ 99,90 por pessoa</div>
-      <button class="btn-info" onclick="toggleInfo(this)">Informações</button>
-      <div class="info">
-        <p>Grupos de 3 ou mais pessoas pagam apenas R$ 99,90 por pessoa.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Plano Casal</h3>
-      <div class="preco">R$ 99,90 por pessoa</div>
-      <button class="btn-info" onclick="toggleInfo(this)">Informações</button>
-      <div class="info">
-        <p>Apresentando certidão de casamento ou união estável.</p>
-      </div>
-    </div>
-
-    <div class="card destaque">
-      <h3>Plano Empresarial</h3>
-      <div class="preco">R$ 99,90 por colaborador</div>
-      <button class="btn-info" onclick="toggleInfo(this)">Informações</button>
-      <div class="info">
-        <ul>
-          <li>Grupos de 10 pessoas</li>
-          <li>Musculação liberada em todos os horários</li>
-          <li>Orientação com professores</li>
-          <li>Sem taxas escondidas</li>
-          <li>Foco total no resultado</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- PLANO FAMÍLIA COM MODAL -->
-  <div class="cards" style="margin-top:40px">
-    <div class="card">
-      <h3>Plano Família</h3>
-      <p class="preco">R$ 99,90 por pessoa</p>
-      <button class="btn" id="btnInfo">Informações</button>
+    <div class="grid">
+      <div class="card">Muay Thai</div>
+      <div class="card">Jiu-Jitsu</div>
+      <div class="card">Karatê</div>
+      <div class="card">FitDance</div>
+      <div class="card">Musculação</div>
     </div>
   </div>
 </section>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3>Plano Família</h3>
-    <p>
-      Grupos de <strong>3 ou mais pessoas</strong> pagam apenas  
-      <strong>R$ 99,90 por pessoa</strong>.
-    </p>
-    <button class="btn modal-close" id="closeModal">Fechar</button>
+<!-- PLANOS -->
+<section id="planos" class="section dark">
+  <div class="container">
+    <h2 class="section-title">Planos</h2>
+
+    <div class="grid">
+
+      <!-- PLANO FAMÍLIA -->
+      <div class="card plano">
+        <h3>Plano Família</h3>
+        <p class="preco">R$ 99,90 <span>/ pessoa</span></p>
+
+        <button class="btn-info" data-target="familia">
+          Informações
+        </button>
+
+        <div class="info" id="familia">
+          <p>
+            Grupo de <strong>3 ou mais pessoas</strong> pagam apenas  
+            <strong>R$ 99,90 por pessoa</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- PLANO CASAL -->
+      <div class="card plano">
+        <h3>Plano Casal</h3>
+        <p class="preco">R$ 99,90 <span>/ pessoa</span></p>
+
+        <button class="btn-info" data-target="casal">
+          Informações
+        </button>
+
+        <div class="info" id="casal">
+          <p>
+            Válido mediante comprovação de casamento ou união estável.
+          </p>
+        </div>
+      </div>
+
+      <!-- PLANO EMPRESARIAL -->
+      <div class="card plano destaque">
+        <h3>Plano Empresarial</h3>
+        <p class="preco">R$ 99,90 <span>/ colaborador</span></p>
+
+        <button class="btn-info" data-target="empresa">
+          Informações
+        </button>
+
+        <div class="info" id="empresa">
+          <ul>
+            <li>Grupos a partir de 10 pessoas</li>
+            <li>Musculação liberada</li>
+            <li>Orientação profissional</li>
+            <li>Sem taxas escondidas</li>
+            <li>Foco total em resultados</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+</section>
 
 <!-- HORÁRIOS -->
-<section id="horarios">
-  <h2>Horários</h2>
-  <ul class="lista">
-    <li>Segunda a Sexta: 05:30 às 22:00</li>
-    <li>Sábado: 08:00 às 16:00</li>
-    <li>Domingo: 09:00 às 12:00</li>
-  </ul>
+<section id="horarios" class="section">
+  <div class="container">
+    <h2 class="section-title">Horários</h2>
+
+    <ul class="lista">
+      <li>Segunda a Sexta — 05:30 às 22:00</li>
+      <li>Sábado — 08:00 às 16:00</li>
+      <li>Domingo — 09:00 às 12:00</li>
+    </ul>
+  </div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato">
-  <h2>Contato</h2>
+<section id="contato" class="section dark">
+  <div class="container">
+    <h2 class="section-title">Contato</h2>
 
-  <div class="contato">
+    <div class="contato">
 
-    <a href="https://wa.me/559186182429" target="_blank" class="btn">
-      <!-- SVG WHATSAPP -->
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.52 3.48A11.91 11.91 0 0012.01 0C5.38 0 .01 5.37.01 12a11.9 11.9 0 001.67 6.07L0 24l6.13-1.61A11.94 11.94 0 0012.01 24C18.63 24 24 18.63 24 12a11.91 11.91 0 00-3.48-8.52z"/>
-      </svg>
-      WhatsApp
-    </a>
+      <a href="https://wa.me/559186182429" target="_blank" class="btn">
+        <!-- WhatsApp SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.91 11.91 0 0012.01 0C5.38 0 .01 5.37.01 12a11.9 11.9 0 001.67 6.07L0 24l6.13-1.61A11.94 11.94 0 0012.01 24C18.63 24 24 18.63 24 12a11.91 11.91 0 00-3.48-8.52z"/>
+        </svg>
+        WhatsApp
+      </a>
 
-    <a href="https://instagram.com/MaximusFitCenter" target="_blank" class="btn btn-outline">
-      <!-- SVG INSTAGRAM -->
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="18" cy="6" r="1"/>
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      </svg>
-      Instagram
-    </a>
+      <a href="https://instagram.com/MaximusFitCenter" target="_blank" class="btn outline">
+        <!-- Instagram SVG -->
+        <svg viewBox="0 0 24 24">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="18" cy="6" r="1"/>
+        </svg>
+        Instagram
+      </a>
 
+    </div>
   </div>
 </section>
 
-<!-- WHATSAPP FIXO -->
-<a class="whatsapp" href="https://wa.me/559186182429" target="_blank">
+<!-- BOTÃO WHATSAPP FIXO -->
+<a href="https://wa.me/559186182429" target="_blank" class="whatsapp-float">
   WhatsApp
 </a>
 
-<footer>
-  © 2026 Maximus Fit Center
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Maximus Fit Center</p>
 </footer>
 
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
