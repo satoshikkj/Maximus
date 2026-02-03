@@ -50,17 +50,6 @@ document.querySelectorAll(".btn-info").forEach(btn => {
     }
   });
 });
-/* Botão modelo antigo (.info-btn) */
-document.querySelectorAll(".info-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const info = btn.nextElementSibling;
-    if (!info || !info.classList.contains("info")) return;
-
-    fecharOutrasInfos(info);
-    info.style.display =
-      info.style.display === "block" ? "none" : "block";
-  });
-});
 
 /* =========================================
    SCROLL SUAVE PARA ÂNCORAS
