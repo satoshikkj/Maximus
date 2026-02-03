@@ -99,4 +99,4 @@ if ("IntersectionObserver" in window) {
     card.classList.remove("show");
     observer.observe(card);
   });
-     }
+}
