@@ -33,6 +33,7 @@ function fecharOutrasInfos(infoAtual) {
 }
 
 /* Botão modelo novo (.btn-info) */
+/* Botão modelo novo (.btn-info) */
 document.querySelectorAll(".btn-info").forEach(btn => {
   btn.addEventListener("click", () => {
     const card = btn.closest(".card");
@@ -50,7 +51,6 @@ document.querySelectorAll(".btn-info").forEach(btn => {
     }
   });
 });
-
 /* Botão modelo antigo (.info-btn) */
 document.querySelectorAll(".info-btn").forEach(btn => {
   btn.addEventListener("click", () => {
