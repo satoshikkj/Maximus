@@ -1,330 +1,326 @@
-
-/* ================= RESET ================= */
-
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* ================================
+   RESET GLOBAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* ================= VARIÁVEIS ================= /
-:root {
-/ Paleta principal */
---azul: #0a84ff;
---blue: #0a3cff;
-
---preto: #0b0b0b;
---bg-dark: #0b0f14;
---bg-light: #121826;
-
---cinza: #1a1a1a;
---text: #e5e7eb;
---muted: #9ca3af;
---branco: #ffffff;
-
---sombra: 0 10px 25px rgba(0, 0, 0, 0.4);
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================= BASE ================= */
 body {
-font-family: "Poppins", system-ui, sans-serif;
-background: var(--bg-dark);
-color: var(--text);
-line-height: 1.6;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #0b0f14;
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
 a {
-text-decoration: none;
-color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-list-style: none;
+  list-style: none;
 }
 
-/* ================= CONTAINER ================= */
+/* ================================
+   VARIÁVEIS
+================================ */
+:root {
+  --azul: #0a84ff;
+  --azul-escuro: #005fd1;
+
+  --bg-dark: #0b0f14;
+  --bg-light: #121826;
+
+  --cinza: #1a1f27;
+  --branco: #ffffff;
+  --muted: #9ca3af;
+
+  --sombra: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* ================================
+   LOADING
+================================ */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ================================
+   CONTAINER
+================================ */
 .container {
-width: 100%;
-max-width: 1100px;
-margin: auto;
-padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* ================= HEADER ================= */
-.header {
-position: sticky;
-top: 0;
-z-index: 100;
-background: rgba(11, 15, 20, 0.95);
-box-shadow: var(--sombra);
-}
-
-.header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-font-size: 1.4rem;
-font-weight: 700;
-}
-
-.logo span {
-color: var(--azul);
-}
-
-/* ================= NAV ================= */
-.nav {
-display: none;
-gap: 16px;
-}
-
-.nav a {
-font-size: 0.9rem;
-opacity: 0.85;
-transition: 0.3s;
-}
-
-.nav a:hover {
-color: var(--azul);
-opacity: 1;
-}
-
-/* ================= MENU MOBILE ================= */
-.menu-btn {
-background: none;
-border: none;
-cursor: pointer;
-}
-
-.menu-btn span {
-display: block;
-width: 24px;
-height: 2px;
-background: var(--branco);
-margin: 5px 0;
-}
-
-.mobile-menu {
-position: fixed;
-top: 64px;
-inset-inline: 0;
-background: var(--bg-light);
-display: none;
-flex-direction: column;
-z-index: 90;
-}
-
-.mobile-menu a {
-padding: 16px;
-color: var(--branco);
-border-bottom: 1px solid #1f2937;
-}
-
-/* ================= HERO ================= */
-.hero {
-min-height: 100vh;
-padding: 120px 20px 40px;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-gap: 16px;
-background: radial-gradient(circle at top, #0a84ff20, transparent);
-}
-
-.hero h2,
-.hero h1 {
-font-size: 2.2rem;
-font-weight: 700;
-}
-
-.hero p {
-opacity: 0.8;
-}
-
-/* ================= BOTÕES ================= */
-.btn,
-.btn-primary {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-padding: 14px 22px;
-border-radius: 30px;
-background: linear-gradient(135deg, var(--azul), #005fd1);
-color: var(--branco);
-font-weight: 600;
-box-shadow: var(--sombra);
-transition: 0.3s;
-}
-
-.btn:hover,
-.btn-primary:hover {
-transform: scale(1.05);
-}
-
-.btn.outline {
-background: transparent;
-border: 2px solid var(--azul);
-color: var(--azul);
-}
-
-/* ================= SECTIONS ================= */
+/* ================================
+   SECTIONS
+================================ */
+section,
 .section {
-padding: 64px 20px;
+  padding: 64px 20px;
 }
 
 .section.dark {
-background: var(--bg-light);
+  background: var(--bg-light);
 }
 
 .section-title,
 .section h2 {
-text-align: center;
-margin-bottom: 32px;
-font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.8rem;
+  color: var(--azul);
+}
+/* ================================
+   HEADER
+================================ */
+header,
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 15, 20, 0.95);
+  box-shadow: var(--sombra);
 }
 
-/* ================= GRID / CARDS ================= */
-.grid,
-.cards {
-display: grid;
-gap: 20px;
+.header-container,
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================================
+   LOGO
+================================ */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--azul);
+}
+
+/* ================================
+   NAV DESKTOP
+================================ */
+nav ul,
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a,
+.nav a {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+nav a:hover,
+.nav a:hover {
+  color: var(--azul);
+  opacity: 1;
+}
+
+/* ================================
+   MENU MOBILE
+================================ */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 26px;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg-light);
+  position: fixed;
+  top: 64px;
+  inset-inline: 0;
+  z-index: 999;
+}
+
+.mobile-menu a {
+  padding: 16px;
+  border-bottom: 1px solid #1f2937;
+}
+/* ================================
+   HERO
+================================ */
+.hero {
+  min-height: 100vh;
+  padding: 120px 20px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  background: radial-gradient(circle at top, #0a84ff20, transparent);
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+.btn,
+.btn-primary,
+.btn-info {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+  color: var(--branco);
+  box-shadow: var(--sombra);
+  transition: 0.3s;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-info:hover {
+  transform: scale(1.05);
+}
+/* ================================
+   GRID / CARDS
+================================ */
+.cards,
+.grid {
+  display: grid;
+  gap: 25px;
 }
 
 @media (min-width: 768px) {
-.grid,
-.cards {
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.nav {
-display: flex;
-}
-
-.menu-btn {
-display: none;
-}
+  .cards,
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 .card {
-background: #0f172a;
-border-radius: 16px;
-padding: 25px;
-box-shadow: var(--sombra);
-transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--cinza);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: var(--sombra);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
 }
 
-.card:hover {
-transform: translateY(-6px);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.card.plano h3 {
-font-size: 1.3rem;
-margin-bottom: 10px;
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
-.card.destaque {
-border: 2px solid var(--azul);
+/* ================================
+   PREÇO
+================================ */
+.preco {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul);
 }
 
-/* ================= PREÇOS ================= */
-.preco,
-.price {
-font-size: 1.6rem;
-font-weight: 700;
-color: var(--azul);
-}
-
-.preco span {
-font-size: 0.8rem;
-color: #ccc;
-}
-
-/* ================= INFO TOGGLE ================= */
-.btn-info,
-.info-btn {
-width: 100%;
-margin-top: 15px;
-padding: 12px;
-background: none;
-border: none;
-color: var(--azul);
-font-weight: 600;
-cursor: pointer;
-}
-
+/* ================================
+   INFO TOGGLE
+================================ */
 .info {
-max-height: 0;
-overflow: hidden;
-opacity: 0;
-transition: all 0.4s ease;
-margin-top: 15px;
-font-size: 0.9rem;
-color: var(--muted);
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  background: #10151d;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 .info.show {
-max-height: 500px;
-opacity: 1;
+  display: block;
 }
-
-.info ul {
-padding-left: 15px;
-}
-
-.info ul li {
-margin-bottom: 6px;
-}
-
-/* ================= LISTA ================= */
-.lista {
-max-width: 400px;
-margin: auto;
-text-align: center;
-}
-
-.lista li {
-padding: 10px 0;
-border-bottom: 1px solid #222;
-}
-
-/* ================= CONTATO ================= */
-.contato,
-.contact-links {
-display: flex;
-flex-direction: column;
-gap: 15px;
-align-items: center;
-}
-
-/* ================= WHATSAPP FLOAT ================= */
+/* ================================
+   WHATSAPP FIXO
+================================ */
+.whatsapp-fixo,
 .whatsapp-float {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25d366;
-color: #fff;
-padding: 14px 18px;
-border-radius: 50px;
-box-shadow: var(--sombra);
-z-index: 200;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 999;
 }
 
-.whatsapp-float svg {
-width: 24px;
-fill: #fff;
-}
-
-/* ================= FOOTER ================= */
+/* ================================
+   FOOTER
+================================ */
+footer,
 .footer {
-text-align: center;
-padding: 24px;
-background: #020617;
-font-size: 0.85rem;
-color: var(--muted);
+  background: #020617;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+  nav,
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
 }
